@@ -2,7 +2,7 @@ import Hero from "@/components/home/Hero";
 import HowItWorks from "@/components/home/how-it-works"
 import WhyChooseUs from "@/components/home/why-choose-us"
 import Testimonials from "@/components/home/testimonials"
-import ContactForm from "@/components/home/contact"
+import ContactForm from "@/components/home/Contact"
 import Chatbot from "@/components/chatbot"
 import PricingPlans from "@/components/home/pricing-plans"
 import FaqSection from "@/components/home/faq-section"
