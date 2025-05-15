@@ -8,6 +8,7 @@ import {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
+  ChatSession,
 } from "@google/generative-ai";
 import { Badge } from "./ui/badge";
 
@@ -19,13 +20,13 @@ interface Message {
 }
 
 const Chatbot: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [input, setInput] = useState("");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [input, setInput] = useState<string>("");
   const [messages, setMessages] = useState<Message[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const genAI = useRef<GoogleGenerativeAI | null>(null);
-  const chat = useRef<any | null>(null);
+  const chat = useRef<ChatSession | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     // Initialize Gemini API
@@ -131,7 +132,7 @@ const Chatbot: React.FC = () => {
         setMessages((prev) => [...prev, errorMessage]);
         console.error("No text in the response from Gemini.");
       }
-    } catch (error: any) {
+    } catch (error) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         content: "There was an error processing your request. Please try again.",
@@ -158,7 +159,7 @@ const Chatbot: React.FC = () => {
       <button
         onClick={toggleChat}
         className={cn(
-          "fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 flex items-center justify-center",
+          "fixed bottom-6 right-6 z-50 p-4 bg-primary text-white rounded-full shadow-lg hover:bg-primary transition-all duration-300 flex items-center justify-center",
           isOpen && "hidden"
         )}
         aria-label="Toggle chat"
@@ -252,10 +253,10 @@ const Chatbot: React.FC = () => {
                 type="submit"
                 disabled={isLoading || !input.trim()}
                 className={cn(
-                  "px-4 py-2 bg-blue-600 text-white font-medium flex items-center justify-center",
+                  "px-4 py-2 bg-primary text-white font-medium flex items-center justify-center",
                   isLoading || !input.trim()
                     ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-blue-700"
+                    : "hover:bg-primary"
                 )}
                 aria-label="Send message"
               >

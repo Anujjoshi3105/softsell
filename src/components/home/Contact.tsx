@@ -49,14 +49,16 @@ export default function ContactForm() {
     },
   })
 
+  
   const onSubmit = (data: FormValues) => {
     setFormStatus("submitting")
+    console.log("Form submitted:", data)
 
     // Simulate form submission
     setTimeout(() => {
       setFormStatus("success")
       toast("Your inquiry has been submitted successfully!", {
-        description: "We'll get back to you within 24 hours.",
+        description: "We&apos;ll get back to you within 24 hours.",
         duration: 5000,
         action: {
           label: "Close",
@@ -82,7 +84,7 @@ export default function ContactForm() {
           >
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">Get in Touch</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to sell your software licenses or have questions? Fill out the form below and we'll get back to you
+              Ready to sell your software licenses or have questions? Fill out the form below and we&apos;ll get back to you
               within 24 hours.
             </p>
           </motion.div>
@@ -100,7 +102,7 @@ export default function ContactForm() {
                 {formStatus === "success" && (
                   <Alert className="mb-6 bg-green-50 dark:bg-green-950 text-green-800 dark:text-green-300 border-green-200 dark:border-green-800">
                     <CheckCircle2 className="h-4 w-4" />
-                    <AlertDescription>Thank you for your message! We'll get back to you shortly.</AlertDescription>
+                    <AlertDescription>Thank you for your message! We&apos;ll get back to you shortly.</AlertDescription>
                   </Alert>
                 )}
 

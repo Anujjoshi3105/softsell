@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useInView } from "framer-motion"
-import { Upload, DollarSign, CreditCard, ArrowRight } from "lucide-react"
+import {  ArrowRight } from "lucide-react"
 import { useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"

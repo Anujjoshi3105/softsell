@@ -52,7 +52,7 @@ export default function Featured() {
           className="mt-10 text-center"
         >
           <p className="text-muted-foreground italic">
-            "SoftSell is revolutionizing how businesses manage their software license assets."
+            &lsquo;SoftSell is revolutionizing how businesses manage their software license assets.&rsquo;
             <span className="block mt-2 font-medium text-foreground">— TechCrunch</span>
           </p>
         </motion.div>

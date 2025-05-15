@@ -31,7 +31,7 @@ export default function Testimonials() {
           >
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">What Our Customers Say</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers have to say about their experience
+              Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about their experience
               with SoftSell.
             </p>
           </motion.div>
@@ -63,7 +63,7 @@ export default function Testimonials() {
                   </div>
 
                   <p className="text-xl md:text-2xl font-medium mb-8 leading-relaxed">
-                    "{testimonials[activeIndex].quote}"
+                    &lsquo;{testimonials[activeIndex].quote}&rsquo;
                   </p>
 
                   <div className="flex items-center">
