@@ -4,20 +4,25 @@ import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { Inter, Outfit } from "next/font/google"
 import { Suspense } from "react";
 import Loading from "./loading";
-import { Montserrat } from 'next/font/google';
 
-const montserrat = Montserrat({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display:'swap',
-  fallback: ['Arial', 'sans-serif'],
-});
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+})
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+})
+
+
 export const metadata: Metadata = {
-  title: "SoftSell – Software Resale Made Easy",
+title: "SoftSell - The Premium Software License Marketplace",
   description:
-    "SoftSell is your trusted B2B platform to turn unused software licenses into cash. Get real-time quotes, accurate license valuation, and fast payouts — all within minutes.",
+    "Transform your unused software licenses into revenue. Get top dollar valuations and fast payments with SoftSell's premium license resale platform.",
   keywords:
     "resell software licenses, unused software resale, sell digital licenses, B2B license marketplace, license buyback, software liquidation, license valuation, monetize software, SoftSell platform",
   authors: [
@@ -60,21 +65,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`relative ${montserrat.className} overflow-x-hidden`}>
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${outfit.variable} font-sans`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+                  <Suspense fallback={<Loading />}>
 
-        <Suspense fallback={<Loading />}>
           <Navbar />
           {children}
           <Footer />
           <Toaster />
-        </Suspense>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
