@@ -26,7 +26,7 @@ title: "SoftSell - The Premium Software License Marketplace",
   keywords:
     "resell software licenses, unused software resale, sell digital licenses, B2B license marketplace, license buyback, software liquidation, license valuation, monetize software, SoftSell platform",
   authors: [
-    { name: "SoftSell Team", url: "https://softsell.vercel.com" },
+    { name: "SoftSell Team", url: "https://softsell.aj.vercel.com" },
     { name: "Anuj Joshi", url: "https://anujoshi.netlify.app" },
   ],
   openGraph: {
@@ -34,7 +34,7 @@ title: "SoftSell - The Premium Software License Marketplace",
     description:
       "Unlock value from your unused software licenses with SoftSell. Get quotes, validate licenses, and get paid instantly. Trusted by businesses for secure resale.",
     siteName: "SoftSell",
-    url: "https://softsell.vercel.com",
+    url: "https://softsell.aj.vercel.com",
     images: [
       {
         url: "/logo.svg",
@@ -55,7 +55,7 @@ title: "SoftSell - The Premium Software License Marketplace",
   icons: {
     icon: "/logo.svg",
   },
-  metadataBase: new URL("https://softsell.vercel.com"),
+  metadataBase: new URL("https://softsell.aj.vercel.com"),
 };
 
 

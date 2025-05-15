@@ -1,6 +1,6 @@
 # SoftSell - Software License Resale Landing Page
 
-[🔗 View Live Site](https://softsell.vercel.app)
+[View Live Site](https://softsell.aj.vercel.app)
 
 SoftSell is a fictional single-page responsive marketing website built as part of the Credex Web Development Internship Assignment. It simulates a software resale startup that helps businesses unlock value from unused software licenses.
 
